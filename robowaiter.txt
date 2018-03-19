@@ -1,0 +1,47 @@
+#include<p89v51rd2.h>
+#include<delay.h>
+void main ()
+{
+
+int i=0;
+while(1)
+{
+	P2_0=1;
+	P2_1=0;
+
+ 	P2_4=1;
+	P2_5=0;
+ 
+//STOP:
+if(P1_2==0);			//obstacle stop[
+{	P2_0=0;
+	P2_1=0;
+
+	P2_4=0;
+	P2_5=0;
+ }
+
+
+
+if(P1_0==1);			  //right
+{
+	P2_0=1;
+	P2_1=0;
+
+	P2_4=1;
+	P2_5=1;
+	delay_ms(1000);
+	}
+	}
+
+if(P1_1==1);				// left
+{
+	P2_0=1;
+	P2_1=1;
+
+	P2_4=1;
+	P2_5=0;
+	delay_ms(1000);
+	}
+ }
+ 
